@@ -35,10 +35,7 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "heading_liquid_gEADwf",
-        "heading_brc_j3H8NW"
-      ],
+      "block_order": ["heading_liquid_gEADwf", "heading_brc_j3H8NW"],
       "settings": {
         "use_dynamic_source": true,
         "image": "shopify://shop_images/bg-heading.jpg",
@@ -140,7 +137,7 @@
         "store_qA8xK7"
       ],
       "settings": {
-        "access_token": "pk.eyJ1IjoibmhvY2xlb3BybyIsImEiOiJja3pncWhsaXUxNDBiMnducnN1cWZsNmZwIn0.7RBTwnj9Dl_SPhKDcY0rYw",
+        "access_token": "",
         "enable_searchbox": true,
         "style_map": "streets",
         "zoom": 12,
@@ -155,9 +152,5 @@
       }
     }
   },
-  "order": [
-    "main_heading_Gg63eE",
-    "main",
-    "store_locator_D7WQqF"
-  ]
+  "order": ["main_heading_Gg63eE", "main", "store_locator_D7WQqF"]
 }
