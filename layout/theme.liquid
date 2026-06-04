@@ -63,6 +63,18 @@
 
       {{ content_for_header }}
     {%- endunless -%}
+
+    {% comment %} implement the custom css files {% endcomment %}
+    {{ 'custom_general.css' | asset_url | stylesheet_tag: preload: true }}
+    {% if template.name == 'index' %}
+      {{ 'custom_index.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endif %}
+    {% if template.name == 'product' and template.suffix != blank and template.suffix != 'anew-land' %}
+      {{ 'custom_product.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endif %}
+    {% if template.name == 'collection' and template.suffix == blank %}
+      {{ 'custom_collection.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endif %}
   </head>
 
   <body class="hdt-page-type-{{ request.page_type }}">

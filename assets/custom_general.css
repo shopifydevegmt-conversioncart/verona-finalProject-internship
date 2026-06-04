@@ -1,0 +1,22 @@
+/* start banner section */
+.custom-slideshow-selector {
+  .hdt-slider__dot {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+  .hdt-slider .hdt-navigation {
+    justify-content: center;
+    top: auto;
+    bottom: 22px;
+    gap: 80px;
+  }
+  button {
+    width: 18px !important;
+  }
+}
+/* end banner section */
+
+/* ----------------------------------------------------------------- */
+/* start footer section */
+.custom-footer-selector {
+}
