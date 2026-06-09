@@ -368,6 +368,19 @@
                       for product in collection.products
                         render 'card-product12', card_product: product, section_id: section.id, class: "hdt-slider__slide hdt-pr-style2 hdt-pr-style12", sizes: sizes, image_ratio: block.settings.image_ratio, color_list: color_list, size_list: size_list, btn_wishlist_code: btn_wishlist_code, show_vendor: block.settings.show_vendor
                       endfor
+                    
+                       when '13'
+                      capture btn_wishlist_code
+                        if settings.wishlist_mode != '0'
+                          render 'btn-wishlist', class: 'hdt-card-product__btn-wishlist hdt-pr_btn', placement: 'left'
+                        endif
+                      endcapture
+                      for product in collection.products
+                        unless settings.remove_collection_url
+                          assign product_url = product.url | within: block.settings.collection
+                        endunless
+                        render 'card-product6', card_product: product, section_id: section.id, class: "hdt-slider__slide hdt-pr-style6", sizes: sizes, image_ratio: block.settings.image_ratio, color_list: color_list, size_list: size_list, product_url: product_url, btn_wishlist_code: btn_wishlist_code, show_vendor: block.settings.show_vendor
+                      endfor
                   endcase
                 else
                   for i in (1..block.settings.products_count)
@@ -522,6 +535,11 @@
         {
           "value": "12",
           "label": "12"
+        }
+        ,
+        {
+          "value": "13",
+          "label": "13"
         }
       ],
       "default": "1"
